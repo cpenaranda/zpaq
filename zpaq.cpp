@@ -3700,12 +3700,12 @@ int Jidac::list() {
 
 // Convert argv to UTF-8 and replace \ with /
 #ifdef unix
-int main(int argc, const char** argv) {
+int main_2(int argc, const char** argv) {
 #else
 #ifdef _MSC_VER
 int wmain(int argc, LPWSTR* argw) {
 #else
-int main() {
+int main_2() {
   int argc=0;
   LPWSTR* argw=CommandLineToArgvW(GetCommandLine(), &argc);
 #endif
